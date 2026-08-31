@@ -1,0 +1,32 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Оптимизация производительности React — интерактивные демо</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box }
+  body { min-height:100vh; background:#191D1B; color:#ECF2EF;
+    font-family:system-ui,-apple-system,'Segoe UI',sans-serif; padding:72px 24px }
+  .wrap { max-width:760px; margin:0 auto }
+  .brand { font-weight:700; font-size:18px; margin-bottom:48px }
+  .brand span { color:#2E8B6F }
+  h1 { font-size:clamp(28px,5vw,44px); line-height:1.1; letter-spacing:-0.02em;
+    background:linear-gradient(120deg,#ECF2EF 30%,#4CBE9C 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:12px }
+  .sub { color:#8B9891; font-size:16px; line-height:1.5; margin-bottom:44px; max-width:56ch }
+  .cards { display:flex; flex-direction:column; gap:12px; counter-reset:l }
+  .card { display:flex; align-items:center; gap:20px; text-decoration:none; color:inherit;
+    border:1px solid rgba(255,255,255,0.14); border-radius:12px; padding:22px 26px;
+    background:rgba(255,255,255,0.05); transition:border-color .2s, background .2s; counter-increment:l }
+  .card:hover { border-color:#2E8B6F; background:rgba(46,139,111,0.10) }
+  .num::before { content:'/0' counter(l); font-family:ui-monospace,monospace; color:#42AE8E; font-size:14px }
+  .card h2 { font-size:18px; font-weight:600; flex:1 }
+  .go { color:#42AE8E; font-size:14px; opacity:0; transition:opacity .2s }
+  .card:hover .go { opacity:1 }
+  .foot { margin-top:56px; font-family:ui-monospace,monospace; font-size:13px; color:#8B9891 }
+  .foot a { color:#42AE8E; text-decoration:none }
+</style></head><body><div class="wrap">
+  <div class="brand">verno<span>/</span>dev</div>
+  <h1>Оптимизация производительности React</h1>
+  <p class="sub">Интерактивные демо из сборника уроков — собранные complete-версии каждого шага. Исходники и start-варианты — в репозитории.</p>
+  <div class="cards"><a class="card" href="./lazy-load/"><span class="num"></span><h2>Ленивая загрузка (React.lazy + Suspense)</h2><span class="go">открыть демо →</span></a><a class="card" href="./memo/"><span class="num"></span><h2>Мемоизация (memo, useMemo, useCallback)</h2><span class="go">открыть демо →</span></a></div>
+  <p class="foot"><a href="https://github.com/erix319/react-performance-optimization">исходники на GitHub</a> · <a href="https://verno-dev.com">verno-dev.com</a></p>
+</div></body></html>
